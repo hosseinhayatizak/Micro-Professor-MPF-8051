@@ -1,0 +1,27 @@
+8051 Assembler           Version 1.00   06/29/124 12:22:25    Page 1
+E:\term 4\sakh\project\codes\task3\TASK3.A51
+
+
+
+    1 0000              ; 8051 Assembly Code to 
+    2 0000              ; Find a Factorial of N 
+    3 0000              ;   Programmer Name:Abhay KAgalakar
+    4 0000              
+    5 0000              ORG 0000H
+    6 0000 7805         MOV R0,#5 ;Number N
+    7 0002 E8           MOV A,R0
+    8 0003 1105         ACALL FACT ;11bit function call
+    9 0005 18           fact:DEC R0
+   10 0006 B80102            CJNE R0,#01,rel ;value of R0 is compared with 1
+   11 0009 8005              SJMP stop  ;if R0=1, stop execution
+   12 000B 88F0         rel:MOV B,R0
+   13 000D A4               MUL AB
+   14 000E 1105             ACALL FACT ;calling back the same function
+   15 0010              stop:END
+
+Defined Symbols:
+
+Defined Labels:
+  fact                                      000005  5
+  rel                                       00000B  11
+  stop                                      000010  16

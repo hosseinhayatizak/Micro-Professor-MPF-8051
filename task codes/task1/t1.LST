@@ -1,0 +1,14 @@
+8051 Assembler           Version 1.00   06/25/124 21:58:10    Page 1
+E:\term 4\sakh\project\codes\task1\t1.A51
+
+
+
+    1 0020              ORG 0020H
+    2 0020 7423         MOV A,#23H
+    3 0022 2451         ADD A,#51H
+    4 0024 F590         MOV P1,A
+    5 0026              END
+
+Defined Symbols:
+
+Defined Labels:

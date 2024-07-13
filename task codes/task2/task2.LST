@@ -1,0 +1,25 @@
+8051 Assembler           Version 1.00   06/28/124 21:52:18    Page 1
+E:\term 4\sakh\project\codes\task2\task2.A51
+
+
+
+    1 0000 7820         MOV R0, #20H;set source address 20H to R0
+    2 0002 7930             MOV R1, #30H;set destination address 30H to R1
+    3 0004              
+    4 0004 E6                   MOV A, @R0;take the first operand from source to register A
+
+                                MOV B,@R0;take the second operand from source to register B
+ **** Error  :  Undefined symbol/label: takethesecondoperandfromsourceto
+    6 0005 A600                 MOV B,@R0;take the second operand from source to register B
+    7 0007              
+    8 0007 A4                   MUL AB ;Multiply A and B
+    9 0008              
+   10 0008 A7F0                 MOV @R1, B; Store higher order byte to 30H
+   11 000A 09                   INC R1; Increase R1 to point to the next location
+   12 000B F7                   MOV @R1, A;Store lower order byte to 31H
+   13 000C 80FE         HALT:   SJMP HALT ; Stop the program
+
+Defined Symbols:
+
+Defined Labels:
+  HALT                                      00000C  12
